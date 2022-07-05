@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class TextFieldForm extends StatelessWidget {
+class TextFieldForm extends StatefulWidget {
   final Widget child;
   final EdgeInsets padding;
   final double borderRadius;
@@ -12,6 +12,13 @@ class TextFieldForm extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  State<TextFieldForm> createState() => _TextFieldFormState();
+}
+
+class _TextFieldFormState extends State<TextFieldForm> {
+  bool isFocused = false;
+
+  @override
   Widget build(BuildContext context) {
     return Theme(
       data: ThemeData(
@@ -19,12 +26,21 @@ class TextFieldForm extends StatelessWidget {
           border: InputBorder.none,
         ),
       ),
-      child: Container(
-        padding: padding,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
-            border: Border.all(color: Theme.of(context).primaryColor)),
-        child: child,
+      child: Focus(
+        onFocusChange: (focus) {
+          setState(() {
+            isFocused = focus;
+          });
+        },
+        child: Container(
+          padding: widget.padding,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+              border: Border.all(
+                color: isFocused ? Theme.of(context).primaryColor : Colors.grey,
+              )),
+          child: widget.child,
+        ),
       ),
     );
   }
