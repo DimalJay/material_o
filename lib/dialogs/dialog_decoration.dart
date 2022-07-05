@@ -5,6 +5,7 @@ const _borderradius = 16.0;
 const _fontSize = 20.0;
 
 class DialogDecoration {
+  final EdgeInsets? padding;
   final BoxBorder? thumbBorder;
   final TextStyle? headerStyle;
   final TextStyle? contentStyle;
@@ -21,6 +22,7 @@ class DialogDecoration {
   final double? secondaryButtonBorderWidth;
 
   DialogDecoration({
+    this.padding,
     this.thumbBorder,
     this.headerStyle,
     this.contentStyle,
@@ -38,6 +40,7 @@ class DialogDecoration {
   });
 
   factory DialogDecoration.defaultValue() => DialogDecoration(
+        padding: const EdgeInsets.all(_padding),
         elevation: 0.0,
         buttonElevation: 0.0,
         buttonForegroundTextColor: Colors.white,

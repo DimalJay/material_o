@@ -17,7 +17,6 @@ Future<T?> showGenericDialog<T>(
   required Widget icon,
   required String header,
   required String content,
-  EdgeInsets? padding,
   DialogDecoration? decoration,
   required DialogCallBackOptions<T> callBack,
 }) {
@@ -27,7 +26,6 @@ Future<T?> showGenericDialog<T>(
             color: color,
             decoration: decoration,
             defaultDecoration: DialogDecoration.defaultValue(),
-            padding: padding ?? const EdgeInsets.all(16),
             content: content,
             header: header,
             icon: icon,
@@ -42,7 +40,6 @@ class _GenericDialog<T> extends StatelessWidget {
   final Color color;
   final DialogDecoration? decoration;
   final DialogDecoration defaultDecoration;
-  final EdgeInsets padding;
   final DialogCallBackOptions<T> callBackOptions;
 
   const _GenericDialog({
@@ -50,7 +47,6 @@ class _GenericDialog<T> extends StatelessWidget {
     required this.decoration,
     required this.icon,
     required this.color,
-    required this.padding,
     required this.header,
     required this.content,
     required this.callBackOptions,
@@ -65,11 +61,15 @@ class _GenericDialog<T> extends StatelessWidget {
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          SizedBox(height: padding.top * .4),
+          SizedBox(
+              height:
+                  (decoration?.padding ?? defaultDecoration.padding!).top * .4),
           buildThumbIcon(),
           buildHeader(),
           buildContent(context),
-          SizedBox(height: padding.top * .4),
+          SizedBox(
+              height:
+                  (decoration?.padding ?? defaultDecoration.padding!).top * .4),
           Row(
             mainAxisSize: MainAxisSize.min,
             children: callBackOptions().entries.map((e) {
@@ -129,7 +129,7 @@ class _GenericDialog<T> extends StatelessWidget {
 
   Padding buildHeader() {
     return Padding(
-      padding: padding,
+      padding: (decoration?.padding ?? defaultDecoration.padding!),
       child: Text(
         header,
         textAlign: decoration?.textAlign ?? defaultDecoration.textAlign!,
@@ -141,7 +141,7 @@ class _GenericDialog<T> extends StatelessWidget {
 
   Widget buildThumbIcon() {
     return Container(
-      padding: padding,
+      padding: (decoration?.padding ?? defaultDecoration.padding!),
       decoration: BoxDecoration(
         borderRadius: decoration?.thumbBorderRadius ??
             defaultDecoration.thumbBorderRadius!,
