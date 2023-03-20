@@ -15,10 +15,10 @@ and the Flutter guide for
 
 ## Installation
 ```yaml
- dependencies:
-  packageA:
-   git:
-    url: git@github.com:DimalJay/material_o.git
+dependencies:
+  material_o:
+    git:
+      url: git@github.com:DimalJay/material_o.git
 
 ```
 
