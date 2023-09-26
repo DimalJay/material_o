@@ -30,3 +30,22 @@ This Widget for Dialogs
         }
     );
 ```
+## Layout
+
+Column Widget Enhanced with Gap
+
+```dart
+ColumnBox(
+    gap: 20.0, //double
+    children: <Widget>[]
+)
+```
+
+Row Widget Enhanced with Gap
+
+```dart
+RowBox(
+    gap: 20.0, //double
+    children: <Widget>[]
+)
+```
