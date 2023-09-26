@@ -13,6 +13,15 @@ and the Flutter guide for
 
 # Material-O Flutter UI Package
 
+## Installation
+```yaml
+dependencies:
+  material_o:
+    git:
+      url: git@github.com:DimalJay/material_o.git
+
+```
+
 ## Create New Dialog Usage
 
 This Widget for Dialogs
