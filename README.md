@@ -14,12 +14,13 @@ and the Flutter guide for
 # Material-O Flutter UI Package
 
 ## Installation
+
+```bash
+flutter pub add material_o
+```
 ```yaml
 dependencies:
-  material_o:
-    git:
-      url: git@github.com:DimalJay/material_o.git
-
+  material_o: ^0.0.6
 ```
 
 ## Create New Dialog Usage

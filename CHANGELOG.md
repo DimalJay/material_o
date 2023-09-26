@@ -1,4 +1,7 @@
 ## 0.0.5
+- Update Platforms
+
+## 0.0.5
 - Added ColumnBox and RowBox
 
 ## 0.0.1
