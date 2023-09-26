@@ -1,3 +1,5 @@
-## 0.0.1
+## 0.0.5
+- Added ColumnBox and RowBox
 
-* TODO: Describe initial release.
+## 0.0.1
+* Initial release notes.

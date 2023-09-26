@@ -51,7 +51,7 @@ class _PopUpDialog extends StatelessWidget {
         onTap: Navigator.of(context).pop,
         child: Icon(
           Icons.close,
-          color: Theme.of(context).textTheme.bodyText1?.color?.withOpacity(0.8),
+          color: Theme.of(context).textTheme.bodyLarge?.color?.withOpacity(0.8),
         ));
   }
 }

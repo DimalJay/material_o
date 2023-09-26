@@ -122,7 +122,7 @@ class _GenericDialog<T> extends StatelessWidget {
       content,
       textAlign: decoration?.textAlign ?? defaultDecoration.textAlign!,
       style: TextStyle(
-        color: Theme.of(context).textTheme.bodyText1?.color?.withOpacity(0.8),
+        color: Theme.of(context).textTheme.bodyLarge?.color?.withOpacity(0.8),
       ),
     );
   }
