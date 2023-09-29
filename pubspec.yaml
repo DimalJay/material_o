@@ -1,12 +1,12 @@
 name: material_o
 description: Flutter Material UI Package.
-version: 0.0.6
+version: 0.1.0
 homepage: https://github.com/DimalJay/material_o
 repository: https://github.com/DimalJay/material_o
 
 environment:
   sdk: '>=3.0.5 <4.0.0'
-  flutter: '>=2.5.0 <3.0.0'
+  flutter: '>=2.5.0'
 
 dependencies:
   flutter:

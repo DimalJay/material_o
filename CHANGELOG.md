@@ -1,8 +1,2 @@
-## 0.0.5
-- Update Platforms
-
-## 0.0.5
-- Added ColumnBox and RowBox
-
-## 0.0.1
-* Initial release notes.
+## 0.1.0
+* Initial release.

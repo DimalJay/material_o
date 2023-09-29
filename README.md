@@ -20,7 +20,7 @@ flutter pub add material_o
 ```
 ```yaml
 dependencies:
-  material_o: ^0.0.6
+  material_o: ^0.1.0
 ```
 
 ## Create New Dialog Usage
