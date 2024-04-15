@@ -103,6 +103,7 @@ class _GenericDialog<T> extends StatelessWidget {
         ),
         elevation:
             decoration?.buttonElevation ?? defaultDecoration.buttonElevation!,
+        padding: EdgeInsets.symmetric(horizontal: 12),
         shape: RoundedRectangleBorder(
           borderRadius: decoration?.buttonBorderRadius ??
               defaultDecoration.buttonBorderRadius!,
