@@ -58,20 +58,25 @@ class _GenericDialog<T> extends StatelessWidget {
     return AlertDialog(
       elevation: decoration?.elevation ?? defaultDecoration.elevation!,
       shape: decoration?.shape ?? defaultDecoration.shape!,
-      actions: [
-        IconButton(
-          onPressed: () {
-            Navigator.of(context, rootNavigator: true).pop();
-          },
-          icon: const Icon(Icons.close),
-        )
-      ],
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           SizedBox(
               height:
                   (decoration?.padding ?? defaultDecoration.padding!).top * .4),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.of(context, rootNavigator: true).pop();
+                },
+                icon: const Icon(Icons.close),
+              ),
+            ],
+          ),
           buildThumbIcon(),
           buildHeader(),
           buildContent(context),

@@ -1,3 +1,6 @@
+## 0.1.4
+* Fix Close Button
+
 ## 0.1.3
 * Add Close Button
 
