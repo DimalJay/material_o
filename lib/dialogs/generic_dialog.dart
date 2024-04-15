@@ -58,6 +58,14 @@ class _GenericDialog<T> extends StatelessWidget {
     return AlertDialog(
       elevation: decoration?.elevation ?? defaultDecoration.elevation!,
       shape: decoration?.shape ?? defaultDecoration.shape!,
+      actions: [
+        IconButton(
+          onPressed: () {
+            Navigator.of(context, rootNavigator: true).pop();
+          },
+          icon: const Icon(Icons.close),
+        )
+      ],
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
